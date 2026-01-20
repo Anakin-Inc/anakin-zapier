@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "jest": "^29.0.0",
-    "zapier-platform-cli": "15.11.0"
+    "zapier-platform-cli": "18.0.7"
   },
   "engines": {
     "node": ">=18",
