@@ -1,0 +1,34 @@
+{
+  "name": "anakin-zapier-app",
+  "version": "1.0.0",
+  "description": "Zapier integration for Anakin API - web scraping, AI search, and intelligent data extraction",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --testTimeout=60000 --detectOpenHandles",
+    "zapier-dev": "zapier test",
+    "zapier-push": "zapier push"
+  },
+  "keywords": [
+    "zapier",
+    "scraper",
+    "web scraping",
+    "ai search",
+    "agentic search",
+    "perplexity",
+    "data extraction",
+    "anakin"
+  ],
+  "author": "Anakin AI <anakin@anakininc.com>",
+  "license": "MIT",
+  "dependencies": {
+    "zapier-platform-core": "15.11.0"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "zapier-platform-cli": "15.11.0"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=9"
+  }
+}

@@ -1,0 +1,8 @@
+# Anakin API Credentials for Testing
+# Copy this file to .env and fill in your actual values
+
+# Your Anakin API Key (get it from https://anakin.io)
+API_KEY=your_api_key_here
+
+# API Base URL (usually https://api.anakin.io)
+BASE_URL=https://api.anakin.io
