@@ -108,8 +108,8 @@ module.exports = {
   key: 'scrape_url',
   noun: 'Scrape',
   display: {
-    label: 'Scrape URL',
-    description: 'Scrape a website and extract structured data including HTML, markdown, and generated JSON.',
+    label: 'Scrape Website',
+    description: 'Scrapes a website and extracts structured data including HTML, markdown, and generated JSON.',
   },
 
   operation: {
@@ -127,7 +127,7 @@ module.exports = {
         type: 'string',
         default: 'us',
         required: false,
-        helpText: 'Country code for proxy routing (e.g., us, uk, de)',
+        helpText: 'Country code for proxy routing. For example: us, uk, de',
       },
       {
         key: 'forceFresh',
@@ -135,7 +135,7 @@ module.exports = {
         type: 'boolean',
         default: 'false',
         required: false,
-        helpText: 'Bypass cache and force a fresh scrape',
+        helpText: 'Bypasses cache and forces a fresh scrape when enabled.',
       },
       {
         key: 'maxWaitTime',
@@ -143,7 +143,7 @@ module.exports = {
         type: 'integer',
         default: '300',
         required: false,
-        helpText: 'Maximum time to wait for the scraping job to complete (default: 300 seconds)',
+        helpText: 'Maximum time to wait for the scraping job to complete. Default is 300 seconds.',
       },
       {
         key: 'pollInterval',
@@ -151,7 +151,7 @@ module.exports = {
         type: 'integer',
         default: '3',
         required: false,
-        helpText: 'Time between status checks (default: 3 seconds)',
+        helpText: 'Time between status checks in seconds. Default is 3 seconds.',
       },
     ],
 

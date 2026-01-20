@@ -31,7 +31,7 @@ module.exports = {
       label: 'API Key',
       type: 'string',
       required: true,
-      helpText: 'Your Anakin API authentication token. Get it from https://anakin.io',
+      helpText: 'Your Anakin API authentication token. Get it from [Anakin.io](https://anakin.io)',
     },
     {
       key: 'baseUrl',
@@ -39,7 +39,7 @@ module.exports = {
       type: 'string',
       default: 'https://api.anakin.io',
       required: true,
-      helpText: 'The base URL of the Anakin API (default: https://api.anakin.io)',
+      helpText: 'The base URL of the Anakin API. Use the default unless instructed otherwise.',
     },
   ],
 

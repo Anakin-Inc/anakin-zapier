@@ -40,7 +40,7 @@ module.exports = {
   noun: 'Agentic Search Results',
   display: {
     label: 'Get Agentic Search Results',
-    description: 'Fetch current status and results for an agentic search job. Returns immediately with current state (processing, completed, or failed).',
+    description: 'Fetches current status and results for an agentic search job. Returns immediately with current state (processing, completed, or failed).',
   },
 
   operation: {
@@ -50,7 +50,7 @@ module.exports = {
         label: 'Job ID',
         type: 'string',
         required: true,
-        helpText: 'The job ID from "Start Agentic Search" action (use the job_id output field)',
+        helpText: 'The job ID from the **Start Agentic Search** action. Use the `job_id` output field.',
       },
     ],
 

@@ -49,7 +49,7 @@ module.exports = {
   noun: 'Agentic Search Job',
   display: {
     label: 'Start Agentic Search',
-    description: 'Start an advanced AI search job that will search, scrape, and extract structured data. Returns a job ID to check results later.',
+    description: 'Starts an advanced AI search job that searches, scrapes, and extracts structured data. Returns a job ID to check results later.',
   },
 
   operation: {
@@ -59,7 +59,7 @@ module.exports = {
         label: 'Search Prompt',
         type: 'text',
         required: true,
-        helpText: 'The search prompt for agentic analysis (e.g., "Find the pricing plans for top 5 CRM software")',
+        helpText: 'The search prompt for agentic analysis. For example: Find the pricing plans for top 5 CRM software',
       },
       {
         key: 'useBrowser',
@@ -67,7 +67,7 @@ module.exports = {
         type: 'boolean',
         default: 'true',
         required: false,
-        helpText: 'Use browser for scraping citations (more reliable but slower)',
+        helpText: 'Uses browser-based scraping for citations. More reliable but slower than standard scraping.',
       },
     ],
 

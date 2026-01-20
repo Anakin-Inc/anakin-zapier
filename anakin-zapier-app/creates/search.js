@@ -41,8 +41,8 @@ module.exports = {
   key: 'search',
   noun: 'Search',
   display: {
-    label: 'AI Search',
-    description: 'Perform an AI-powered search query using Perplexity. Get instant answers with citations and sources.',
+    label: 'Perform AI Search',
+    description: 'Performs an AI-powered search query using Perplexity. Returns instant answers with citations and sources.',
   },
 
   operation: {
@@ -52,7 +52,7 @@ module.exports = {
         label: 'Search Query',
         type: 'text',
         required: true,
-        helpText: 'The search query or question to ask (e.g., "What are the latest trends in AI?")',
+        helpText: 'The search query or question to ask. For example: What are the latest trends in AI?',
       },
       {
         key: 'maxResults',
@@ -60,7 +60,7 @@ module.exports = {
         type: 'integer',
         default: '5',
         required: false,
-        helpText: 'Maximum number of search results to return (default: 5)',
+        helpText: 'Maximum number of search results to return. Default is 5.',
       },
     ],
 
