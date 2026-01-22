@@ -33,8 +33,8 @@ describe('Creates', () => {
     }, 60000); // 60 second timeout
   });
 
-  describe('Scrape URL Action', () => {
-    test('should scrape a URL', async () => {
+  describe('Extract Website Data Action', () => {
+    test('should extract website data', async () => {
       const testBundle = {
         ...bundle,
         inputData: {
@@ -46,11 +46,11 @@ describe('Creates', () => {
         },
       };
 
-      const result = await appTester(App.creates.scrape_url.operation.perform, testBundle);
+      const result = await appTester(App.creates.extract_website_data.operation.perform, testBundle);
       
       expect(result).toBeDefined();
       expect(result.success).toBe(true);
-      expect(result.operation).toBe('scrapeUrl');
+      expect(result.operation).toBe('extractWebsiteData');
       expect(result.url).toBe('https://example.com');
       expect(result.status).toBe('completed');
       expect(result.html).toBeDefined();

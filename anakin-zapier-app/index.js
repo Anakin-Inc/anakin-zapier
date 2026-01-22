@@ -1,6 +1,6 @@
 // Main Zapier app definition
 const authentication = require('./authentication');
-const scrapeUrlAction = require('./creates/scrape_url');
+const extractWebsiteDataAction = require('./creates/scrape_url');
 const searchAction = require('./creates/search');
 const startAgenticSearchAction = require('./creates/start_agentic_search');
 const getAgenticSearchResultsAction = require('./creates/get_agentic_search_results');
@@ -36,7 +36,7 @@ module.exports = {
 
   // Define all creates (actions)
   creates: {
-    [scrapeUrlAction.key]: scrapeUrlAction,
+    [extractWebsiteDataAction.key]: extractWebsiteDataAction,
     [searchAction.key]: searchAction,
     [startAgenticSearchAction.key]: startAgenticSearchAction,
     [getAgenticSearchResultsAction.key]: getAgenticSearchResultsAction,

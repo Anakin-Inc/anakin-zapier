@@ -37,7 +37,7 @@ const pollForCompletion = async (z, bundle, requestId, maxWaitTime = 300000, pol
       z.console.log(`Job completed successfully for request ID: ${requestId}`);
       return {
         success: true,
-        operation: 'scrapeUrl',
+        operation: 'extractWebsiteData',
         request_id: requestId,
         ...statusData,
       };
@@ -46,7 +46,7 @@ const pollForCompletion = async (z, bundle, requestId, maxWaitTime = 300000, pol
     // Check if job failed
     if (status === 'failed' || status === 'error') {
       const errorMessage = statusData.error || statusData.error_message || 'Unknown error occurred';
-      throw new Error(`Scraping job failed: ${errorMessage}`);
+      throw new Error(`Data extraction job failed: ${errorMessage}`);
     }
 
     // Job is still processing
@@ -65,9 +65,9 @@ const perform = async (z, bundle) => {
     throw new Error('URL is required');
   }
 
-  z.console.log(`Submitting scraping job for URL: ${url}`);
+  z.console.log(`Submitting data extraction job for URL: ${url}`);
 
-  // Step 1: Submit the scraping job
+  // Step 1: Submit the data extraction job
   const submitResponse = await z.request({
     url: `${bundle.authData.baseUrl}/v1/request`,
     method: 'POST',
@@ -105,11 +105,11 @@ const perform = async (z, bundle) => {
 };
 
 module.exports = {
-  key: 'scrape_url',
-  noun: 'Scrape',
+  key: 'extract_website_data',
+  noun: 'Website Data',
   display: {
-    label: 'Scrape Website',
-    description: 'Scrapes a website and extracts structured data including HTML, markdown, and generated JSON.',
+    label: 'Extract Website Data',
+    description: 'Extracts structured data from any website including HTML, markdown, and generated JSON.',
   },
 
   operation: {
@@ -119,7 +119,7 @@ module.exports = {
         label: 'URL',
         type: 'string',
         required: true,
-        helpText: 'The full URL of the website you want to scrape',
+        helpText: 'The full URL of the website to extract data from',
       },
       {
         key: 'country',
@@ -135,7 +135,7 @@ module.exports = {
         type: 'boolean',
         default: 'false',
         required: false,
-        helpText: 'Bypasses cache and forces a fresh scrape when enabled.',
+        helpText: 'Bypasses cache and forces fresh data extraction when enabled.',
       },
       {
         key: 'maxWaitTime',
@@ -143,7 +143,7 @@ module.exports = {
         type: 'integer',
         default: '300',
         required: false,
-        helpText: 'Maximum time to wait for the scraping job to complete. Default is 300 seconds.',
+        helpText: 'Maximum time to wait for the data extraction job to complete. Default is 300 seconds.',
       },
       {
         key: 'pollInterval',
@@ -160,7 +160,7 @@ module.exports = {
     // Sample output for Zapier UI
     sample: {
       success: true,
-      operation: 'scrapeUrl',
+      operation: 'extractWebsiteData',
       request_id: 'req_123456',
       url: 'https://example.com',
       status: 'completed',

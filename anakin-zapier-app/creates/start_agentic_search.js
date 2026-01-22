@@ -49,7 +49,7 @@ module.exports = {
   noun: 'Agentic Search Job',
   display: {
     label: 'Start Agentic Search',
-    description: 'Starts an advanced AI search job that searches, scrapes, and extracts structured data. Returns a job ID to check results later.',
+    description: 'Starts an advanced AI search job that searches web sources and extracts structured data. Returns a job ID to check results later.',
   },
 
   operation: {
@@ -67,7 +67,7 @@ module.exports = {
         type: 'boolean',
         default: 'true',
         required: false,
-        helpText: 'Uses browser-based scraping for citations. More reliable but slower than standard scraping.',
+        helpText: 'Uses browser-based extraction for citations. More reliable but slower than standard extraction.',
       },
     ],
 
