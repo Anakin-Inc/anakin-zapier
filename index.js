@@ -5,10 +5,11 @@ const searchAction = require('./creates/search');
 const startAgenticSearchAction = require('./creates/start_agentic_search');
 const getAgenticSearchResultsAction = require('./creates/get_agentic_search_results');
 
-// Add custom middleware to include API key in all requests
+// Add custom middleware to include API key and source tracking in all requests
 const addApiKeyToHeader = (request, z, bundle) => {
+  request.headers = request.headers || {};
+  request.headers['X-Source'] = 'zapier';
   if (bundle.authData && bundle.authData.apiKey) {
-    request.headers = request.headers || {};
     request.headers['X-API-Key'] = bundle.authData.apiKey;
   }
   return request;
