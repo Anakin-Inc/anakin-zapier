@@ -1,6 +1,6 @@
 {
   "name": "anakin-zapier-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Zapier integration for Anakin API - web scraping, AI search, and intelligent data extraction",
   "main": "index.js",
   "scripts": {
