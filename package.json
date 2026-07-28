@@ -1,7 +1,7 @@
 {
   "name": "anakin-zapier-app",
-  "version": "1.1.0",
-  "description": "Zapier integration for Anakin API - web scraping, AI search, and intelligent data extraction",
+  "version": "1.2.0",
+  "description": "Zapier integration for Anakin API - web scraping, mapping, crawling, AI search, Wire site automation, website monitoring, AI visibility, browser sessions, and AI browser automation",
   "main": "index.js",
   "scripts": {
     "test": "jest --testTimeout=60000 --detectOpenHandles",
@@ -16,6 +16,10 @@
     "agentic search",
     "perplexity",
     "data extraction",
+    "wire",
+    "browser automation",
+    "website monitoring",
+    "ai visibility",
     "anakin"
   ],
   "author": "Anakin AI <anakin@anakininc.com>",
