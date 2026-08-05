@@ -1,0 +1,30 @@
+name: Push to Zapier
+
+# Pushes a new private version to Zapier on every merge to master.
+# Safe to automate: `zapier push` never affects installed users --
+# per Zapier's own docs, "live/production apps are protected from
+# pushes." Promoting a version to production is a deliberate, separate
+# action -- see promote.yml.
+on:
+  push:
+    branches: [master]
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Push to Zapier
+        run: npx zapier push
+        env:
+          ZAPIER_DEPLOY_KEY: ${{ secrets.ZAPIER_DEPLOY_KEY }}
